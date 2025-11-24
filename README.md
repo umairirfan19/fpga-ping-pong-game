@@ -23,31 +23,32 @@ This project was developed as part of **COE758 — Digital Systems Engineering**
 
 ## 🧩 **Project Architecture**
 
+## 🧩 Project Architecture
+
 ```
 fpga-ping-pong-game/
-├── src/                     # Synthesizable RTL (core VHDL design)
-│   ├── pong_top.vhd
-│   ├── ball_physics.vhd
-│   ├── player_movement.vhd
-│   ├── field_renderer.vhd
-│   ├── refresh_divider.vhd
-│   └── vga_timing.vhd
+├── src/                               # 🎮 Synthesizable VHDL (core gameplay + VGA)
+│   ├── pong_top.vhd                   # Main top-level module
+│   ├── ball_physics.vhd               # Ball movement, scoring, collision
+│   ├── player_movement.vhd            # Paddle movement logic
+│   ├── field_renderer.vhd             # Draws playfield + objects
+│   ├── refresh_divider.vhd            # Pixel clock divider
+│   └── vga_timing.vhd                 # 640×480 VGA timing generator
 │
-├── sim/                     # Testbench / simulation files
-│   └── pong_top.vhd
+├── sim/                               # 🧪 Testbench / simulation files
+│   └── pong_top.vhd                   # Simulation entry point
 │
-├── docs/                    # Reports, logs, generated tool output
-│   ├── PINGPONG.gise
-│   ├── PINGPONG.xise
-│   ├── default_waveform1.pdf
-│   ├── pong_top_guide.ncd
-│   ├── pong_top_pad.csv
-│   ├── pong_top_summary.html
-│   └── pong_top_usage.xml
+├── docs/                              # 📄 Reports, logs, generated output
+│   ├── PINGPONG.gise                  # ISE project environment
+│   ├── PINGPONG.xise                  # Xilinx ISE project file
+│   ├── default_waveform1.pdf          # Tool-generated waveform export
+│   ├── pong_top_guide.ncd             # Generated FPGA netlist
+│   ├── pong_top_pad.csv               # Device pin assignment report
+│   ├── pong_top_summary.html          # Device summary
+│   └── pong_top_usage.xml             # Resource utilization
 │
-└── README.md
+└── README.md                          # 📘 Project overview & documentation
 ```
-
 
 ## 🧠 **Module Overview**
 
