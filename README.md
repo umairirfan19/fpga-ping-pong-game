@@ -23,10 +23,8 @@ This project was developed as part of **COE758 — Digital Systems Engineering**
 
 ## 🧩 **Project Architecture**
 
-## 🧩 Project Architecture
-
+```
 fpga-ping-pong-game/
-│
 ├── src/                     # Synthesizable RTL (core VHDL design)
 │   ├── pong_top.vhd
 │   ├── ball_physics.vhd
@@ -48,7 +46,8 @@ fpga-ping-pong-game/
 │   └── pong_top_usage.xml
 │
 └── README.md
----
+```
+
 
 ## 🧠 **Module Overview**
 
