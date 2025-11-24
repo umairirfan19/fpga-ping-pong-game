@@ -23,29 +23,31 @@ This project was developed as part of **COE758 — Digital Systems Engineering**
 
 ## 🧩 **Project Architecture**
 
-fpga-ping-pong-game
-│
-├── src/ # Synthesizable RTL (core design)
-│ ├── ball_physics.vhd
-│ ├── field_renderer.vhd
-│ ├── player_movement.vhd
-│ ├── pong_top.vhd
-│ ├── refresh_divider.vhd
-│ └── vga_timing.vhd
-│
-├── sim/ # Simulation files (testbench, functional checks)
-│ └── pong_top.vhd
-│
-└── docs/ # Reports, build output, generated assets
-├── PINGPONG.gise
-├── PINGPONG.xise
-├── default_waveform1.pdf
-├── pong_top_guide.ncd
-├── pong_top_pad.csv
-├── pong_top_summary.html
-└── pong_top_usage.xml
+## 🧩 Project Architecture
 
-
+fpga-ping-pong-game/
+│
+├── src/                     # Synthesizable RTL (core VHDL design)
+│   ├── pong_top.vhd
+│   ├── ball_physics.vhd
+│   ├── player_movement.vhd
+│   ├── field_renderer.vhd
+│   ├── refresh_divider.vhd
+│   └── vga_timing.vhd
+│
+├── sim/                     # Testbench / simulation files
+│   └── pong_top.vhd
+│
+├── docs/                    # Reports, logs, generated tool output
+│   ├── PINGPONG.gise
+│   ├── PINGPONG.xise
+│   ├── default_waveform1.pdf
+│   ├── pong_top_guide.ncd
+│   ├── pong_top_pad.csv
+│   ├── pong_top_summary.html
+│   └── pong_top_usage.xml
+│
+└── README.md
 ---
 
 ## 🧠 **Module Overview**
